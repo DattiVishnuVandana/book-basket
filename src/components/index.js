@@ -1,0 +1,2 @@
+export {Header} from "./LayOuts/Header"
+export {Footer} from "./LayOuts/Footer"

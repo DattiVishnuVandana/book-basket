@@ -1,12 +1,13 @@
 
 import './App.css';
-
+ import { AllRoutes } from './routes/AllRoutes';
+import { Footer, Header } from './components';
 function App() {
   return (
    <>
-     <p className="text-7xl font-bold underline">
-    Hello world!
-  </p>
+    <Header/>
+    <AllRoutes/>
+  <Footer/>
    </>
   );
 }
