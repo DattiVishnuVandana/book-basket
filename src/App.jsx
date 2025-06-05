@@ -7,7 +7,10 @@ function App() {
    <>
     <Header/>
     <AllRoutes/>
-  <Footer/>
+    <div className="footer fixed bottom-0 mx-30">
+       <Footer/>
+    </div>
+ 
    </>
   );
 }

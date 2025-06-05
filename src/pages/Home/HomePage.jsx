@@ -1,7 +1,17 @@
-import React from 'react'
+import { Hero } from './components/Hero'
+import { Featured } from './components/Featured'
+import { Testimonials } from './components/Testimonal'
+import { Faq } from './components/Faq'
 
 export const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div className='mx-40'>
+
+<Hero/>
+
+<Featured/>
+<Testimonials/>
+<Faq/>
+    </div>
   )
 }

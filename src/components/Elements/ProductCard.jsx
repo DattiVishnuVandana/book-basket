@@ -1,9 +1,9 @@
 export const ProductCard = () => {
   return (
-    <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+    <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 ">
         <a href="/" className="relative" >
             <span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">Best Seller</span>
-            <img className="rounded-t-lg w-full h-64" src="" alt="" />
+            <img className="rounded-t-lg w-full h-64" src="https://media.springernature.com/full/springer-static/cover-hires/book/978-1-4842-9855-8" alt="" />
         </a>
         <div className="p-5">
             <a href="/">
