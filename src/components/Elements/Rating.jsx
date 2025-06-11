@@ -8,8 +8,8 @@ export const Rating = ({rating}) => {
   return (
     <div>
         {
-            ratingArr.map((val)=>(
-                val? (<i className="text-lg bi bi-star-fill text-yellow-500 mr-1" />):( <i className="text-lg bi bi-star text-yellow-500 mr-1"/>)
+            ratingArr.map((val,index)=>(
+                val? (<i className="text-lg bi bi-star-fill text-yellow-500 mr-1"  key={index}/>):( <i className="text-lg bi bi-star text-yellow-500 mr-1 "  key={index}/>)
             ))
         }
     </div>
