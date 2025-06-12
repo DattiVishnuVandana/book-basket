@@ -6,17 +6,16 @@ import {useTitle} from "../../hooks/useTitle"
 import { useFilter } from '../../context'
 export const ProductList = () => { 
 
-const {productList}=useFilter();
-
+// const {productList}=useFilter();
+const {products,initialProductList}=useFilter()
     const [show,setShow]=useState(false)
-    const [products,setProducts]=useState([])
+    // const [products,setProducts]=useState([])
     const search=useLocation().search
    
    const  searchTerm=new URLSearchParams(search).get("q") 
    useTitle( "Explore ebooks collection")
   console.log(searchTerm);
-  console.log("pt");
-  console.log(productList);
+
     useEffect(()=>{
       const fetchProducts=async ()=>{
        try {
@@ -24,8 +23,8 @@ const {productList}=useFilter();
            const data = await res.json()
        
            const filtereddata=data.filter((pro)=>pro.name.toLowerCase().includes(searchTerm?searchTerm:""))
-           setProducts(filtereddata)
-
+          //  setProducts(filtereddata)
+initialProductList(filtereddata)
          } catch (error) {
            console.error("Error fetching featured products:", error)
          }
