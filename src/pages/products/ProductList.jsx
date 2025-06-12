@@ -1,22 +1,46 @@
 import React, { useEffect, useState } from 'react'
 import { ProductCard } from '../../components/Elements/ProductCard'
 import { FilterBar } from './components/FilterBar'
+<<<<<<< HEAD
 
 export const ProductList = () => {
     const [show,setShow]=useState(false)
     const [products,setProducts]=useState([])
+=======
+import { useLocation } from 'react-router-dom'
+
+export const ProductList = () => { 
+    const [show,setShow]=useState(false)
+    const [products,setProducts]=useState([])
+    const search=useLocation().search
+   
+   const  searchTerm=new URLSearchParams(search).get("q") 
+   
+  console.log(searchTerm);
+>>>>>>> 467e08e (Continue working on book-basket project)
     useEffect(()=>{
       const fetchProducts=async ()=>{
        try {
            const res = await fetch("http://localhost:8000/products")
            const data = await res.json()
+<<<<<<< HEAD
            setProducts(data)
+=======
+       
+           const filtereddata=data.filter((pro)=>pro.name.toLowerCase().includes(searchTerm?searchTerm:""))
+           setProducts(filtereddata)
+
+>>>>>>> 467e08e (Continue working on book-basket project)
          } catch (error) {
            console.error("Error fetching featured products:", error)
          }
      }
      fetchProducts();
+<<<<<<< HEAD
     },[])
+=======
+    },[searchTerm])
+>>>>>>> 467e08e (Continue working on book-basket project)
   return (
     <div >
 
