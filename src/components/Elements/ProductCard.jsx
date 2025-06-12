@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
 import { Rating } from "./Rating"
+import {useTitle} from "../../hooks/useTitle"
 export const ProductCard = ({products}) => {
     const {id,name,overview,long_description,price,poster,image_local,rating,in_stock,best_seller}=products  
+    // useTitle(name)
   return (
     <div className="m-3 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 " key={id}>
         <Link to={`/products/${id}`} className="relative" >

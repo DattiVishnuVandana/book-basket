@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Rating } from '../components/Elements/Rating';
-
+import { useTitle } from '../hooks/useTitle';
 const ProductDetail = () => {
   const { id } = useParams();
   console.log(id);
@@ -15,13 +15,15 @@ const ProductDetail = () => {
         const data = await res.json();
         console.log(data);
         setProduct(data);
+    
       } catch (err) {
         console.log(err);
       }
     };
+        
     fetchpro();
   }, [id]);
-
+useTitle(product.name?product.name:"product")
   return (
     <div className="p-5 m-5">
       <div className="w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col md:flex-row h-auto">
