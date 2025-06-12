@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo.png"
-
-export const Header = () => {
-=======
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.png"
 import {Search} from "../section/Search"
@@ -14,7 +8,6 @@ export const Header = () => {
 const [searchsec,setSearchSec]=useState(false)
 
 
->>>>>>> 467e08e (Continue working on book-basket project)
   return (
     <header>    
 
@@ -26,11 +19,7 @@ const [searchsec,setSearchSec]=useState(false)
               </Link>
               <div className="flex items-center relative">
                   <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-gear-wide-connected"></span>
-<<<<<<< HEAD
-                  <span className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
-=======
                   <span onClick={()=>setSearchSec(!searchsec)}className="cursor-pointer text-xl text-gray-700 dark:text-white mr-5 bi bi-search"></span>
->>>>>>> 467e08e (Continue working on book-basket project)
                   <Link to="/cart" className="text-gray-700 dark:text-white mr-5">
                     <span className="text-2xl bi bi-cart-fill relative">
                       <span className="text-white text-sm absolute -top-1 left-2.5 bg-rose-500 px-1 rounded-full ">0</span>
@@ -42,10 +31,7 @@ const [searchsec,setSearchSec]=useState(false)
           </div>
 
       </nav>
-<<<<<<< HEAD
-=======
      {searchsec && <Search searchsec={searchsec} setSearchSec={setSearchSec} />}
->>>>>>> 467e08e (Continue working on book-basket project)
     </header>
   )
 }
